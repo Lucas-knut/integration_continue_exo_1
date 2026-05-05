@@ -42,7 +42,7 @@ Ouvrir [http://localhost:8080](http://localhost:8080) dans un navigateur.
 ### 3. Récupérer le mot de passe administrateur initial
 
 ```bash
-docker exec jenkins cat /var/jenkins_home/secrets/initialAdminPassword
+docker exec jenkins cat /var/lib/jenkins/secrets/initialAdminPassword
 ```
 
 Coller ce mot de passe dans l'interface web pour terminer la configuration initiale.
@@ -78,4 +78,5 @@ docker compose logs -f jenkins
 # Vérifier les versions dans le conteneur
 docker exec jenkins git --version
 docker exec jenkins mvn --version
+docker exec jenkins java --version
 ```
