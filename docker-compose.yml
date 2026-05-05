@@ -11,6 +11,7 @@ services:
     volumes:
       - jenkins_home:/var/jenkins_home   # Persistance des données Jenkins
       - /var/run/docker.sock:/var/run/docker.sock  # Accès au Docker hôte (optionnel)
+      - ./projet:/home/projet             # Dossier partagé Mac ↔ conteneur Ubuntu
     environment:
       - JAVA_OPTS=-Djenkins.install.runSetupWizard=false # Désactive le wizard initial (optionnel)
     networks:

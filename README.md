@@ -17,6 +17,7 @@ Mise en place d'un environnement d'intégration continue conteneurisé via Docke
 
 ```
 exo1/
+├── projet/             # Dossier partagé — ton code source (monté dans le conteneur)
 ├── Dockerfile          # Image custom basée sur ubuntu:22.04 avec Jenkins, Maven & Git
 ├── docker-compose.yml  # Définition de la stack
 └── README.md
